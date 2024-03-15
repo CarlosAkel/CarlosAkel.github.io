@@ -16,7 +16,7 @@ import '../css/login-sign.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from "js-cookie";
-const MAINURL = "https://short-url-chile.onrender.com"
+import MAINURL from './ApiConfig';
 
 function Copyright(props) {
     return (
@@ -49,6 +49,9 @@ export default function Login() {
   function go_to(){
         navigate("/signup");
     }
+  function go_to_recover(){
+    navigate("/reset-password");
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -110,7 +113,7 @@ export default function Login() {
             </Button>
             <Grid container >
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="" variant="body2" onClick={go_to_recover}>
                   Forgot password?
                 </Link>
               </Grid>

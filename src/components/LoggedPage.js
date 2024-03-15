@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from "js-cookie";
 import '../css/inputUrl.css'
+import MAINURL from './ApiConfig';
 
 function LoggedPage() {
-    const MAINURL = "https://short-url-chile.onrender.com"
     const [urlList, setUrlList] = useState([]);
     const [url, setUrl] = useState('');
     const navigate = useNavigate();
@@ -13,7 +13,6 @@ function LoggedPage() {
     const get_urls = async () => {
             
         const token = Cookies.get("access_token");
-        console.log("TOKEN :  ", token)
         const config = {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -29,7 +28,6 @@ function LoggedPage() {
 
     useEffect(() => {
         get_urls();
-
     }, []);
     
 

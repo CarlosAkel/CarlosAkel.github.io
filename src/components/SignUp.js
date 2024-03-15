@@ -15,8 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import '../css/login-sign.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
-const MAINURL = "https://short-url-chile.onrender.com"
+import MAINURL from './ApiConfig';
 
 function Copyright(props) {
     return (

@@ -6,16 +6,36 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import GoogleIcon from '@mui/icons-material/Google';
 import Cookies from "js-cookie";
+import MAINURL from './ApiConfig';
 function UrlShort() {
-
-  const MAINURL = "https://short-url-chile.onrender.com"
-  //const MAINURL = "http://localhost:8000"
   const [url, setUrl] = useState('');
   const navigate = useNavigate();
 
 
   useEffect(() => {
     //checkAuthenticationStatus();
+    var currentUrl = window.location.href;
+    var urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has('token') && urlParams.has('reset')) {
+      var token = urlParams.get('token');
+      var reset = urlParams.get('reset');
+      Cookies.set("access_token",token );
+      if(reset === "true")
+      {
+        navigate('/change-password');
+      }
+    }
+    else if (urlParams.has('token'))
+    {
+      var token = urlParams.get('token');
+      Cookies.set("access_token",token );
+      navigate('/urls');
+    }
+     else {
+      // Handle the case when the 'token' parameter is not found in the URL
+      console.log('Token not found in the URL.');
+    }
   }, []);
 
   function checkAuthenticationStatus(popupWindow) {
@@ -25,6 +45,11 @@ function UrlShort() {
         popupWindow.close();
         clearInterval(interval);
         navigate('/urls');
+      }
+      else {
+        //console.log(Cookies)
+        //console.log("NOTFOUND")
+        //pass
       }
     }, 1000);
   }
@@ -46,11 +71,9 @@ function UrlShort() {
   }
   async function go_to_google_login() {
     const go = MAINURL + "/google/login"
-    var popupWindow = window.open(go, "PopupWindow", "width=600,height=400");
-    if (popupWindow) {
-      popupWindow.focus();
-      checkAuthenticationStatus(popupWindow);
-    }
+
+    const popup = window.open(go, '_self');
+    //checkAuthenticationStatus(popup);
   }
 
 
@@ -64,7 +87,7 @@ function UrlShort() {
       </div>
 
       <div className="card">
-        <div>Here you can login and obtain the list of your Urls</div>
+        <div>Here you can login and obtain the list of your Urls :3 </div>
         <div></div>
         <div className="login-container">
           <button className='button_class' onClick={go_to_login}>
