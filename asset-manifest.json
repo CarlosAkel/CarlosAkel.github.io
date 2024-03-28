@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.c13d96c5.css",
-    "main.js": "/static/js/main.2e6d9512.js",
+    "main.css": "/static/css/main.361005cb.css",
+    "main.js": "/static/js/main.02a82cf7.js",
     "static/js/453.c2b2afdb.chunk.js": "/static/js/453.c2b2afdb.chunk.js",
-    "static/media/retro_test.png": "/static/media/retro_test.f71abafe6b83f1dc4b97.png",
+    "static/media/retro.png": "/static/media/retro.f71abafe6b83f1dc4b97.png",
+    "static/media/Extension_1.png": "/static/media/Extension_1.1e3cc946a7d3d11c34ce.png",
+    "static/media/Dragon Warrior IV Regular.ttf": "/static/media/Dragon Warrior IV Regular.5b53948ba9ff8d9a1965.ttf",
     "index.html": "/index.html",
-    "main.c13d96c5.css.map": "/static/css/main.c13d96c5.css.map",
-    "main.2e6d9512.js.map": "/static/js/main.2e6d9512.js.map",
+    "main.361005cb.css.map": "/static/css/main.361005cb.css.map",
+    "main.02a82cf7.js.map": "/static/js/main.02a82cf7.js.map",
     "453.c2b2afdb.chunk.js.map": "/static/js/453.c2b2afdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c13d96c5.css",
-    "static/js/main.2e6d9512.js"
+    "static/css/main.361005cb.css",
+    "static/js/main.02a82cf7.js"
   ]
 }
