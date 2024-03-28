@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Dragon Warrior IV Regular";
+    src: url("./Dragon Warrior IV Regular.ttf") format("truetype");
+  }
+
+  
+.field{
+    background-color: white;
+    font-family: 'Dragon Warrior IV Regular', sans-serif !important;
+}
+
+.send_button{
+    font-family: 'Dragon Warrior IV Regular', sans-serif !important;
+    background-color: black !important;
+}
+
+.send_button:hover{
+    font-family: 'Dragon Warrior IV Regular', sans-serif !important;
+    background-color: black !important;
+}
+
+.send_button:hover::before {
+    content: '';
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white; /* Adjust arrow color */
+    cursor: pointer;
+  }

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Dragon Warrior IV Regular";
+    src: url("./Dragon Warrior IV Regular.ttf") format("truetype");
+  }
+
+.project-card {
+    width: 30%;
+    height: 43%;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Dragon Warrior IV Regular', sans-serif;
+    cursor: pointer;
+    
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 8px 16px white;
+    transform: translateY(-5px);
+  }
+  
+  .project-info {
+    margin-top: 5px;
+  }
+  
+  .project-info h3 {
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .project-info p {
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .project-info a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .project-card img {
+    width: 50%;
+  }
+
+  
+  
+  .project-info a:hover {
+    color: red;
+  }
+  

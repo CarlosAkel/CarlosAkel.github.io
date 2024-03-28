@@ -1,39 +1,79 @@
+import React, { useRef } from 'react';
+import './App.css';
+import Navbar from './components/navbar';
+import Background from './components/background';
+import Info from './components/Info';
+import ProjectCard from './components/ProjectsCard';
+import Contact from './components/Contact';
+import image1 from './images/retro.png';
+import image2 from './images/Extension_1.png';
+import Experience from './components/Experience';
 
-import UrlShort from './components/UrlShort';
-import ShowUrl from './components/ShowUrl';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import LoggedPage from './components/LoggedPage';
-import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import PasswordReset from './components/PasswordReset';
-import PasswordResetMailLinkSend from './components/PasswordResetMailLinkSend';
 function App() {
+  const projects = [
+    {
+      title: 'Short Url',
+      description: 'This website shortens your URL',
+      image: image1, // Path to image
+      demoUrl: 'https://short-url-chile-front-phi.vercel.app/',
+      codeUrl: 'https://github.com/CarlosAkel/Short-Url-Chile-Front'
+    },
+    {
+      title: 'Extension For Visual Studio',
+      description: 'Just A Scraggy',
+      image: image2,
+      demoUrl: 'https://marketplace.visualstudio.com/items?itemName=CarlosAK.Scraggy',
+      codeUrl: 'https://github.com/CarlosAkel/theme'
+    },
+    {
+      title: 'SAMPLE',
+      description: 'SAMPLE',
+      image: '',
+      demoUrl: '',
+      codeUrl: ''
+    },
+    // Add more projects as needed
+  ];
+
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToProjects = () => {
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
-     
-      
-      <BrowserRouter>
       <Navbar />
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<UrlShort />} />
-          <Route path="/show" element={<ShowUrl />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/urls" element={<LoggedPage />} />
-          <Route path="/reset-password" element={<PasswordReset />} />
-          <Route path="/change-password" element={<PasswordResetMailLinkSend />} />
-        </Routes>
+      <div className='App'>
+        <Info scrollToProjects={scrollToProjects} scrollToContact={scrollToContact} />
+
+        <div ref={projectsRef}>
+          <div className='container'>
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
         </div>
-      </BrowserRouter>
+
+        <Experience></Experience>
+
+        <Background />
+
+        <div ref={contactRef}>
+          <Contact />
+        </div>
+      </div>
     </div>
-
-
   );
 }
-
-
 
 export default App;
