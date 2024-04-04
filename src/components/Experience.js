@@ -10,24 +10,28 @@ import { Typography } from '@mui/material';
 
 const experiences = [
   {
-    title: 'Software Engineer',
-    company: 'XYZ Solutions',
-    date: 'January 2020 - Present',
-    description: 'SAMPLE'
+    title: 'Snow Consulting (December 2022 - January 2023)',
+    company: 'Professional Internship',
+    description: 'Creation of information filters within the database corresponding to the bot portal used within the company.'
   },
   {
-    title: 'Frontend Developer Intern',
-    company: 'ABC Technologies',
-    date: 'May 2019 - December 2019',
-    description: 'SAMPLE'
+    title: 'Snow Consulting (August - December 2022)',
+    company: 'Part-Time Work',
+    description: 'Establishment of the foundation for a new bot implementation within the company.'
   },
   {
-    title: 'Task Of Testing',
-    company: 'ABC Technologies',
-    date: 'May 2019 - December 2019',
-    description: 'SAMPLE INFO'
+    title: 'Talana (January - February 2022)',
+    company: 'Pre-Professional Internship',
+    description: 'Development of the interface for the attendance and shift module (now in production), using Vue with Django backend. Code testing within the company, ensuring implementation quality.'
   },
+  {
+    title: 'Clínica Somno (July - August 2023)',
+    company: 'Junior Back-End Developer',
+    description: 'Incremental development of the company\'s core platform and database management.'
+  }
 ];
+
+
 
 const Experience = () => {
     return (

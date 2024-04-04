@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import '../css/navbar.css'
-
+import Socials from './socials';
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
 
@@ -69,13 +69,16 @@ function Navbar(props) {
           >
             CARLOS AKEL
           </Typography>
+          
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }} className='font_let'>
                 {item}
               </Button>
             ))}
+            
           </Box>
+          <Socials></Socials>
         </Toolbar>
       </AppBar>
     </div>

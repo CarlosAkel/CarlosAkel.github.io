@@ -1,127 +1,186 @@
 @font-face {
-    font-family: "Dragon Warrior IV Regular";
-    src: url("./Dragon Warrior IV Regular.ttf") format("truetype");
-  }
-
-.container{
-    margin-top: 100px;
-}
-.TextBox{
-    border: solid white 8px;
-    color: white;
-    border-radius: 10px;
-    height: 27%;
-    width: 30%;
-    top: 100px;
-    font-family: 'Dragon Warrior IV Regular', sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 36%;
+  font-family: "Dragon Warrior IV Regular";
+  src: url("./Dragon Warrior IV Regular.ttf") format("truetype");
 }
 
-.TextBox span{
-    position: absolute;
-    top: -9%;
-    padding: 10px;
-    left: 37%;
-    font-size: 12px;
-    background-color: black;
+.container {
+  margin-top: 100px;
 }
 
-.TextBox-2{
-    border: solid white 8px;
-    color: white;
-    border-radius: 10px;
-    height: 18%;
-    width: 25%;
-    top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Dragon Warrior IV Regular', sans-serif;
-    font-size: 10px;
-    position: absolute;
-    top: 10%;
-    left: 40%;
+.TextBox {
+  border: solid white 8px;
+  color: white;
+  border-radius: 10px;
+  height: 27%;
+  width: 30%;
+  top: 100px;
+  font-family: 'Dragon Warrior IV Regular', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 36%;
 }
 
-.TextBox-2 span{
-    position: absolute;
-    top: -15%;
-    padding: 10px;
-    left: 26%;
-    font-size: 12px;
-    background-color: black;
+.TextBox span {
+  position: absolute;
+  top: -9%;
+  padding: 10px;
+  left: 37%;
+  font-size: 12px;
+  background-color: black;
+}
+
+.TextBox-2 {
+  border: solid white 8px;
+  color: white;
+  border-radius: 10px;
+  height: 18%;
+  width: 25%;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dragon Warrior IV Regular', sans-serif;
+  font-size: 10px;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.TextBox-2 span {
+  position: absolute;
+  top: -15%;
+  padding: 10px;
+  left: 26%;
+  font-size: 12px;
+  background-color: black;
 }
 
 
-.TextBox-3{
-    border: solid white 8px;
-    color: white;
-    border-radius: 10px;
-    height: 30%;
-    width: 10%;
-    top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Dragon Warrior IV Regular', sans-serif;
-    font-size: 10px;
-    position: absolute;
-    top: 10%;
-    left: 26%;
+.TextBox-3 {
+  border: solid white 8px;
+  color: white;
+  border-radius: 10px;
+  height: 30%;
+  width: 10%;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dragon Warrior IV Regular', sans-serif;
+  font-size: 10px;
+  position: absolute;
+  top: 10%;
+  left: 26%;
 }
 
-.TextBox-3 span{
-    position: absolute;
-    top: -9%;
-    padding: 10px;
-    left: 9%;
-    font-size: 12px;
-    background-color: black;
+.TextBox-3 span {
+  position: absolute;
+  top: -9%;
+  padding: 10px;
+  left: 9%;
+  font-size: 12px;
+  background-color: black;
 }
 
-.Title{
-    color: white;
-    top: 43.8%;
-    position: absolute;
-    background-color: black;
-    font-family: 'Dragon Warrior IV Regular', sans-serif;
+.Title {
+  color: white;
+  top: 43.8%;
+  position: absolute;
+  background-color: black;
+  font-family: 'Dragon Warrior IV Regular', sans-serif;
 }
 
 
 .GridItem {
-    position: relative;
+  position: relative;
+}
+
+.GridItem:hover::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+  /* Adjust arrow color */
+  cursor: pointer;
+}
+
+
+.Paper {
+  background-color: black !important;
+  color: white !important;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.Paper-2{
+  background-color: black !important;
+  color: white !important;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.about {
+  padding: 10px;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.position {
+  position: absolute;
+  left: 45%;
+  top: 29%;
+}
+
+
+
+/* Media query for cellphone resolutions */
+@media only screen and (max-width: 1800px)  {
+  .container {
+    margin-top: 20px;
+    /* Adjust margin for smaller screens */
   }
-  
+  .Paper {
+    font-size: 8px;
+  }
+  .Paper-2{
+    font-size: 8px;
+    padding: 13px;
+  }
+  .about{
+    font-size: 7px;
+  }
+
+  .TextBox {
+  }
+
+  .TextBox-2 span{
+    font-size: 8px;
+
+  }
+
+  .TextBox-3 span{
+    font-size: 8px;
+    left: 8%;
+  }
+
+  .Title {
+    top: 35%;
+    /* Adjust position for smaller screens */
+  }
+
   .GridItem:hover::before {
     content: '';
     position: absolute;
-    left: 10%;
+    left: 13%;
     top: 70%;
-    transform: translateY(-50%);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid white; /* Adjust arrow color */
-    cursor: pointer;
   }
 
-  
-  .Paper {
-    background-color: black !important;
-    color: white !important;
-    font-size: 18px;
-    cursor: pointer;
-  }
 
-  .about {
-    padding: 10px;
-    font-size: 10px;
-    margin-top: 10px;
+  .position {
+    height: 20%;
   }
-
-  .position{
-    position: absolute;
-    left: 45%;
-    top: 29%;
-  }
+}
