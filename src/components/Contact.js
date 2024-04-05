@@ -23,7 +23,7 @@ const Contact = () => {
     const form = e.target; // Get the HTML form element
     emailjs
       .sendForm('service_zxhbe6i', 'template_k3duxdm', form, {
-        publicKey: '3_qRokxouknULi6Vk',
+        publicKey: 'wBMPwVAT9HnS4sB2a',
       })
       .then(
         () => {
