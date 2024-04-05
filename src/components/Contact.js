@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography } from '@mui/material';
 import '../css/Contact.css';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
+  const notify = () => toast("Email Sended");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,17 +23,22 @@ const Contact = () => {
     const form = e.target; // Get the HTML form element
     emailjs
       .sendForm('service_zxhbe6i', 'template_k3duxdm', form, {
-        publicKey: 'MgmA7t7nYqT6VLoVF',
+        publicKey: '3_qRokxouknULi6Vk',
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          notify();
         },
         (error) => {
           console.log('FAILED...', error);
         },
       );
-    console.log("FormData", form);
+      setFormData({
+        from_name: '',
+        email: '',
+        message: '',
+      });
   };
 
   return (
@@ -84,6 +93,7 @@ const Contact = () => {
           </div>
         </Grid>
       </Grid>
+      <ToastContainer />
     </div>
   );
 };
