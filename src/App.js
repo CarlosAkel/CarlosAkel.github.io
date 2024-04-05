@@ -10,6 +10,7 @@ import image2 from './images/Extension_1.png';
 import image3 from './images/ds_assets.png';
 import Experience from './components/Experience';
 
+
 function App() {
   const projects = [
     {

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography } from '@mui/material';
-import '../css/Contact.css'
+import '../css/Contact.css';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    from_name: '',
     email: '',
     message: '',
   });
@@ -15,8 +16,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle form submission, e.g., send the data to your backend
-    console.log(formData);
+    const form = e.target; // Get the HTML form element
+    emailjs
+      .sendForm('service_zxhbe6i', 'template_k3duxdm', form, {
+        publicKey: 'MgmA7t7nYqT6VLoVF',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+    console.log("FormData", form);
   };
 
   return (
@@ -31,8 +44,8 @@ const Contact = () => {
               <TextField
                 label="Name"
                 variant="outlined"
-                name="name"
-                value={formData.name}
+                name="from_name"
+                value={formData.from_name}
                 onChange={handleChange}
                 fullWidth
                 margin="normal"
@@ -49,6 +62,7 @@ const Contact = () => {
                 margin="normal"
                 required
                 className='field'
+                type="email"
               />
               <TextField
                 label="Message"
