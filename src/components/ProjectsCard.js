@@ -16,12 +16,12 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="project-card">
-      <img src={currentProject.image} alt={currentProject.title} />
+      <a href={currentProject.demoUrl}><img src={currentProject.image} alt={currentProject.title} /></a>
       <div className="project-info">
-        <h3>{currentProject.title}</h3>
-        <p>{currentProject.description}</p>
+      <a href={currentProject.demoUrl}><h3>{currentProject.title}</h3></a>
+        <a href={currentProject.demoUrl}><p>{currentProject.description}</p></a>
         <a href={currentProject.demoUrl} target="_blank" rel="noopener noreferrer">Demo</a>
-        <a href={currentProject.codeUrl} target="_blank" rel="noopener noreferrer">Code</a>
+        <a href={currentProject.codeUrl} target="_blank" rel="noopener noreferrer" style={{color:"lightblue"}}>Code</a>
       </div>
     </div>
   );

@@ -40,9 +40,11 @@
     display: inline-block;
     margin-right: 10px;
     text-decoration: none;
-    color: white;
+    color: lightgreen;
   }
-
+  .project-info a:nth-child(2) {
+    color: lightgreen;
+  }
   .project-card img {
     width: 50%;
   }
@@ -50,6 +52,6 @@
   
   
   .project-info a:hover {
-    color: gray;
+    color: gray !important;
   }
   

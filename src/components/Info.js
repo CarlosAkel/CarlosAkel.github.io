@@ -24,7 +24,6 @@ export default function Info({ scrollToProjects,scrollToContact, scrollToExperie
       </div>
 
       <div className="TextBox-2">
-        <span>General</span>
         <Grid container spacing={2}>
           <Grid item xs={6} className="GridItem">
             <Paper className='Paper'>About</Paper>
@@ -40,9 +39,8 @@ export default function Info({ scrollToProjects,scrollToContact, scrollToExperie
           </Grid>
         </Grid>
       </div>
-
+      
       <div className="TextBox-3">
-        <span>Carlos Akel</span>
         <Grid container style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Paper className='Paper-2' xs={6}>Software Engineer</Paper>
           <Paper className='Paper-2' xs={6}>Full-Stack Developer</Paper>

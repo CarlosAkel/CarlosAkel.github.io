@@ -5,6 +5,7 @@
 
 .bar{
     background-color: black !important;
+    max-height: 20px;
     
 }
 .font_let {

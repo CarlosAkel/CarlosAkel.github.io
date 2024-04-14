@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import image1 from './images/retro.png';
 import image2 from './images/Extension_1.png';
 import image3 from './images/ds_assets.png';
+import image4 from './images/apk.jpg';
 import Experience from './components/Experience';
 
 
@@ -22,7 +23,7 @@ function App() {
     },
     {
       title: 'Extension For Visual Studio',
-      description: 'Just A Scraggy',
+      description: 'Just A Scraggy Extension',
       image: image2,
       demoUrl: 'https://marketplace.visualstudio.com/items?itemName=CarlosAK.Scraggy',
       codeUrl: 'https://github.com/CarlosAkel/theme'
@@ -33,6 +34,13 @@ function App() {
       image: image3,
       demoUrl: 'https://whale-app-xhvo6.ondigitalocean.app/',
       codeUrl: 'https://github.com/CarlosAkel/DsModelsChileCA/tree/main/back'
+    },
+    {
+      title: 'SimpleMangaApp',
+      description: 'Project to read mangas (wi-fi only) that uses mangadex api',
+      image: image4,
+      demoUrl: 'https://drive.google.com/file/d/1IgyBI0lkTY7NmCNMffINorfwK9lOe0a8/view?usp=drive_link',
+      codeUrl: 'https://github.com/CarlosAkel/FlutterTest'
     },
     // Add more projects as needed
   ];
