@@ -1,49 +1,79 @@
-import React from 'react';
-import { Grid, Paper } from '@mui/material';
-import '../css/info.css';
-import '../css/image.css';
-import me from '../images/me.png';
+import React from "react";
+import { Grid, Paper } from "@mui/material";
+import "../css/info.css";
+import "../css/image.css";
+import me from "../images/me.png";
 
-export default function Info({ scrollToProjects,scrollToContact, scrollToExperience }) {
+export default function Info({
+  scrollToProjects,
+  scrollToContact,
+  scrollToExperience,
+}) {
   return (
     <div className="container">
       <div className="TextBox">
-        <div className='about'>
-          I'm Carlos Akel, a full-stack web developer passionate about innovation. I thrive on exploring emerging technologies to enhance web development.
+        <div className="about">
+          I'm Carlos Akel, a full-stack web developer passionate about
+          innovation. I thrive on exploring emerging technologies to enhance web
+          development.
         </div>
-        <div className='about'>
-          With a versatile background in software engineering, I adapt seamlessly to diverse projects.
+        <div className="about">
+          With a versatile background in software engineering, I adapt
+          seamlessly to diverse projects.
         </div>
-        <div className='about'>
-          My goal is to craft interactive experiences that inspire and delight users, pushing the boundaries of what's possible.
+        <div className="about">
+          My goal is to craft interactive experiences that inspire and delight
+          users, pushing the boundaries of what's possible.
         </div>
       </div>
 
-      <div >
-        <img src={me} className='position'></img>
+      <div>
+        <img src={me} className="position"></img>
       </div>
 
       <div className="TextBox-2">
         <Grid container spacing={2}>
-          <Grid item xs={6} className="GridItem">
-            <Paper className='Paper'>About</Paper>
+          <Grid
+            item
+            xs={6}
+            className="GridItem"
+            onClick={(event) => {
+              event.preventDefault();
+              window.open(
+                "https://drive.google.com/file/d/1v8_rF34oSlkk0ajMBOb50CMt1oHiF1Vs/view?usp=drive_link",
+                "_blank"
+              );
+            }}
+          >
+            <Paper className="Paper">About</Paper>
           </Grid>
           <Grid item xs={6} className="GridItem" onClick={scrollToProjects}>
-            <Paper className='Paper'>Projects</Paper>
+            <Paper className="Paper">Projects</Paper>
           </Grid>
           <Grid item xs={6} className="GridItem" onClick={scrollToExperience}>
-            <Paper className='Paper'>Experience</Paper>
+            <Paper className="Paper">Experience</Paper>
           </Grid>
           <Grid item xs={6} className="GridItem" onClick={scrollToContact}>
-            <Paper className='Paper'>Contact</Paper>
+            <Paper className="Paper">Contact</Paper>
           </Grid>
         </Grid>
       </div>
-      
+
       <div className="TextBox-3">
-        <Grid container style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <Paper className='Paper-2' xs={6}>Software Engineer</Paper>
-          <Paper className='Paper-2' xs={6}>Full-Stack Developer</Paper>
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Paper className="Paper-2" xs={6}>
+            Software Engineer
+          </Paper>
+          <Paper className="Paper-2" xs={6}>
+            Full-Stack Developer
+          </Paper>
         </Grid>
       </div>
     </div>
