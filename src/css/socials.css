@@ -40,6 +40,11 @@
   transition-duration: .3s;
 }
 
+.containerFive:hover {
+  background-color: #283533;
+  transition-duration: .3s;
+}
+
 .socialContainer:active {
   transform: scale(0.9);
   transition-duration: .3s;
@@ -56,6 +61,19 @@
 .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
 }
+
+.socialSvg-2 {
+  width: 37px;
+}
+
+.socialSvg-2 path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg-2 {
+  animation: slide-in-top 0.3s both;
+}
+
 
 @keyframes slide-in-top {
   0% {

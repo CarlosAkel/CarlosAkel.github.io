@@ -10,4 +10,12 @@
 }
 .font_let {
     font-family: 'Dragon Warrior IV Regular', sans-serif !important;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.font_let:hover  {
+    color: gray;
 }

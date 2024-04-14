@@ -48,6 +48,7 @@ function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
+  const infoRef = useRef(null);
 
   const scrollToProjects = () => {
     if (projectsRef.current) {
@@ -67,12 +68,20 @@ function App() {
     }
   };
 
+  const scrollToInfo = () => {
+    if (infoRef.current) {
+      infoRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div>
-      <Navbar />
+      <Navbar scrollToInfo={scrollToInfo}/>
       <div className='App'>
+      <div ref={infoRef}>
         <Info scrollToProjects={scrollToProjects} scrollToContact={scrollToContact} scrollToExperience={scrollToExperience} />
-
+        </div>
         <div ref={projectsRef}>
           <div className='container'>
             {projects.map((project, index) => (
