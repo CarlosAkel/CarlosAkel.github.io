@@ -15,6 +15,13 @@ import Experience from './components/Experience';
 function App() {
   const projects = [
     {
+      title: 'SimpleMangaApp',
+      description: 'Project to read mangas (wi-fi only) that uses mangadex api',
+      image: image4,
+      demoUrl: 'https://drive.google.com/file/d/1IgyBI0lkTY7NmCNMffINorfwK9lOe0a8/view?usp=drive_link',
+      codeUrl: 'https://github.com/CarlosAkel/FlutterTest'
+    },
+    {
       title: 'Short Url',
       description: 'This website shortens your URL',
       image: image1, // Path to image
@@ -35,13 +42,7 @@ function App() {
       demoUrl: 'https://whale-app-xhvo6.ondigitalocean.app/',
       codeUrl: 'https://github.com/CarlosAkel/DsModelsChileCA/tree/main/back'
     },
-    {
-      title: 'SimpleMangaApp',
-      description: 'Project to read mangas (wi-fi only) that uses mangadex api',
-      image: image4,
-      demoUrl: 'https://drive.google.com/file/d/1IgyBI0lkTY7NmCNMffINorfwK9lOe0a8/view?usp=drive_link',
-      codeUrl: 'https://github.com/CarlosAkel/FlutterTest'
-    },
+
     // Add more projects as needed
   ];
 
@@ -80,7 +81,7 @@ function App() {
       <Navbar scrollToInfo={scrollToInfo}/>
       <div className='App'>
       <div ref={infoRef}>
-        <Info scrollToProjects={scrollToProjects} scrollToContact={scrollToContact} scrollToExperience={scrollToExperience} />
+        <Info style={{height: "10% !important"}} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact} scrollToExperience={scrollToExperience} />
         </div>
         <div ref={projectsRef}>
           <div className='container'>

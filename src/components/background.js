@@ -11,7 +11,7 @@ function Background(){
 
 
         <div className='DQ-TEXT'>Hello Warrior</div>
-        <div className='DQ-TEXT DQ-TEXT-EF' style={{ top: '70%', left: '20%', rotate: '23deg', fontSize: '20px' }}>Let's Start Our Adventure</div>
+        <div className='DQ-TEXT DQ-TEXT-EF' style={{ top: '40%', left: '20%', rotate: '23deg', fontSize: '20px' }}>Let's Start Our Adventure</div>
 
       </div>
 

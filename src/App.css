@@ -2,7 +2,7 @@
   text-align: center;
   background-color: black;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 0.6fr);
 }
 
 .flex-grow {
@@ -11,7 +11,9 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+
+  flex-wrap: wrap; 
+
 }
 
 /* Adjust the width of the Navbar according to your preference */
